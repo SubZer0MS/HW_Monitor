@@ -38,7 +38,7 @@ DWORD CDriverControl::CreateDrv()
 		SERVICE_KERNEL_DRIVER,
 		m_dwStartType,
 		SERVICE_ERROR_IGNORE,
-		m_lpFilePath,
+		_T("C:\\Users\\mihsar\\Documents\\Visual Studio 2015\\Projects\\MKTXGetHWInfo\\MKTXGetHWInfo_.sys"), //m_lpFilePath,
 		NULL,
 		NULL,
 		NULL,
