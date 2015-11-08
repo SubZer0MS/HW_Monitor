@@ -147,6 +147,7 @@
   <ItemGroup>
     <ClInclude Include="CDriverControl.h" />
     <ClInclude Include="CHardwareInfo.h" />
+    <ClInclude Include="HTTPServer.h" />
     <ClInclude Include="MKTXGetHWInformation.h" />
     <ClInclude Include="Resource.h" />
     <ClInclude Include="stdafx.h" />
@@ -156,6 +157,7 @@
   <ItemGroup>
     <ClCompile Include="CDriverControl.cpp" />
     <ClCompile Include="CHardwareInfo.cpp" />
+    <ClCompile Include="HTTPServer.cpp" />
     <ClCompile Include="MKTXGetHWInformation.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>

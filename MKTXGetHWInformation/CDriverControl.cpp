@@ -38,7 +38,7 @@ DWORD CDriverControl::CreateDrv()
 		SERVICE_KERNEL_DRIVER,
 		m_dwStartType,
 		SERVICE_ERROR_IGNORE,
-		m_lpFilePath,
+		_T("C:\\Users\\mihsar\\Documents\\Visual Studio 2015\\Projects\\MKTXGetHWInfo\\MKTXGetHWInfo_.sys"), //m_lpFilePath,
 		NULL,
 		NULL,
 		NULL,
@@ -119,7 +119,7 @@ DWORD CDriverControl::StopDrv()
 	SERVICE_STATUS ss;
 	HRESULT status = DRV_OK;
 
-	if(!IsStarted()) return DRV_OK;
+	//if(!IsStarted()) return DRV_OK;
 
 	SC_HANDLE hSCManager = OpenSCManager(NULL, NULL, SC_MANAGER_CREATE_SERVICE);
 	if(hSCManager == NULL) return DRV_ERROR_SCMANAGER;
@@ -149,8 +149,8 @@ DWORD CDriverControl::StopDrv()
 
 DWORD CDriverControl::UnloadDrv()
 {
-	if(!IsLoaded()) return DRV_OK;
-	if(IsStarted() && StopDrv() != DRV_OK) return DRV_ERROR_UNLOAD;
+	//if(!IsLoaded()) return DRV_OK;
+	//if(IsStarted() && StopDrv() != DRV_OK) return DRV_ERROR_UNLOAD;
 
 	HRESULT status = ERROR_SUCCESS;
 
@@ -179,12 +179,12 @@ DWORD CDriverControl::UnloadDrv()
 	return DRV_OK;
 }
 
-BOOL CDriverControl::IsLoaded()
+inline BOOL CDriverControl::IsLoaded()
 {
 	return m_loaded;
 }
 
-BOOL CDriverControl::IsStarted()
+inline BOOL CDriverControl::IsStarted()
 {
 	return m_started;
 }

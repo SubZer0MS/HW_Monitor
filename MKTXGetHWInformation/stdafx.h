@@ -23,6 +23,7 @@
 #include <malloc.h>
 #include <memory.h>
 #include <tchar.h>
+#include <http.h>
 
 // own header files
 #include "Utils.h"

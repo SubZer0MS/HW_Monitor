@@ -154,7 +154,7 @@ private:
 		UINT count;
 	} READ_MEMORY_INPUT, *PREAD_MEMORY_INPUT;
 
-	BOOL IsLoaded();
-	BOOL IsStarted();
+	inline BOOL IsLoaded();
+	inline BOOL IsStarted();
 
 };
