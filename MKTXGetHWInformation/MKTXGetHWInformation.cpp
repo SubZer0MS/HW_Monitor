@@ -73,7 +73,7 @@ BOOL InitInstance(HINSTANCE hInstance, int nCmdShow)
 	{
 		niData.hIcon = NULL;
 	}
-	
+
 	LPCTSTR lpszDriverFullPathName = NULL;
 	utils::GetDriverFullPathName(lpszDriverFullPathName);
 	
@@ -82,8 +82,8 @@ BOOL InitInstance(HINSTANCE hInstance, int nCmdShow)
 
 	pDriver = new CDriverControl(
 		pszDriverFullPathName,
-		_T("MKTXGetHWInfo"),
-		_T("M3k4tr0n1X HWInfo"),
+		utils::GetStringResource(IDS_SERVICE_NAME, MAX_PATH),
+		utils::GetStringResource(IDS_SERVICE_DISPLAY_NAME, MAX_PATH),
 		SERVICE_DEMAND_START
 	);
 

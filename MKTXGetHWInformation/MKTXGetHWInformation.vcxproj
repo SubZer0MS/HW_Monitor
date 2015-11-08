@@ -155,7 +155,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="CDriverControl.cpp" />
-    <ClCompile Include="CHardwareInfocpp.cpp" />
+    <ClCompile Include="CHardwareInfo.cpp" />
     <ClCompile Include="MKTXGetHWInformation.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>

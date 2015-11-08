@@ -151,7 +151,6 @@ DWORD CDriverControl::UnloadDrv()
 {
 	if(!IsLoaded()) return DRV_OK;
 	if(IsStarted() && StopDrv() != DRV_OK) return DRV_ERROR_UNLOAD;
-	if(StopDrv() != DRV_OK) return DRV_ERROR_UNLOAD;
 
 	HRESULT status = ERROR_SUCCESS;
 
