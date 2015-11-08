@@ -81,8 +81,7 @@ BOOL InitInstance(HINSTANCE hInstance, int nCmdShow)
 	StringCchCopy(pszDriverFullPathName, MAX_PATH, lpszDriverFullPathName);
 
 	pDriver = new CDriverControl(
-		//pszDriverFullPathName,
-		_T("C:\\Users\\mihsar\\Documents\\Visual Studio 2015\\Projects\\MKTXGetHWInfo\\MKTXGetHWInfo_.sys"), // temporary using this until our driver is signed
+		pszDriverFullPathName,
 		_T("MKTXGetHWInfo"),
 		_T("M3k4tr0n1X HWInfo"),
 		SERVICE_DEMAND_START
